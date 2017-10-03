@@ -105,4 +105,11 @@ config FATFS_MAX_LFN
    help
       Maximum long filename length. Can be reduced to save RAM.
 
+config FATFS_EXFAT
+   bool "exFAT support"
+   depends on !FATFS_LFN_NONE
+   default n
+   help
+      This option switches support of exFAT file system.
+
 endmenu
